@@ -59,12 +59,45 @@ Instead of uploading images through the backend server:
 
 ## 🛠️ Installation & Setup
 
-### 1️⃣ Clone Repository
+### 1 Clone Repository
 
 ```bash
 git clone https://github.com/RahulM2416/S3-Based-Ecommerce-web.git
 cd S3-Based-Ecommerce-web
 ```
 
+### 2 Backend Setup 
+```bash
+cd backend
+npm install
+```
 
+### create .env file
+```bash
+AWS_ACCESS_KEY_ID=your_access_key
+AWS_SECRET_ACCESS_KEY=your_secret_key
+AWS_REGION=your_region
+S3_BUCKET_NAME=your_bucket_name
+PORT=3000
+```
+
+### Run Backend 
+```bash
+npm start
+```
+
+### 3 Frontend Setup
+```bash
+cd frontend
+npm install
+```
+
+### Run Backend 
+```bash
+npm run dev
+```
+
+---
+
+## STAR THE REPO IF YOU LIKE THIS PROJECT
 
