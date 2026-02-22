@@ -99,6 +99,7 @@ export default function ProductForm() {
     return;
   }
   alert("Upload Successful ✅")
+  navigate("/");
 } catch(err){
     console.log('error :' ,err);
 }
@@ -200,7 +201,6 @@ export default function ProductForm() {
         {/* SUBMIT BUTTON */}
         <button
           type="submit"
-          onClick={() => navigate("/")}
           className="w-full py-4 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold text-lg hover:scale-105 transition"
         >
           Upload Product
