@@ -1,8 +1,9 @@
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
 
 export default function ProductForm() {
-    const [file, setFile] = useState(null);
+  const [file, setFile] = useState(null);
+  const navigate = useNavigate();
 
   const [form, setForm] = useState({
     name: "",
@@ -66,8 +67,7 @@ export default function ProductForm() {
 
     const data = await response.json();
 
-
-  const { url } = data;
+  const { url , finalName} = data;
 
   const res = await fetch(url, {
     method: "PUT",
@@ -82,6 +82,22 @@ export default function ProductForm() {
     return;
   }
 
+  const prodRes = await fetch("http://localhost:3000/api/products" , {
+    method : 'POST',
+    headers : {
+      'content-type' : 'application/json'
+    },
+    body : JSON.stringify({
+      name : form.name,
+      description : form.description,
+      price : form.price,
+      filename : finalName,
+    })
+  });
+  if(!prodRes.ok){
+    alert("product upload failed");
+    return;
+  }
   alert("Upload Successful ✅")
 } catch(err){
     console.log('error :' ,err);
@@ -184,6 +200,7 @@ export default function ProductForm() {
         {/* SUBMIT BUTTON */}
         <button
           type="submit"
+          onClick={() => navigate("/")}
           className="w-full py-4 rounded-xl bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold text-lg hover:scale-105 transition"
         >
           Upload Product

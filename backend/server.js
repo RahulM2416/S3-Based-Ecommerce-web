@@ -63,6 +63,11 @@ app.post("/api/products", async (req,res) => {
     res.json({message : 'Success'});
 });
 
+app.get('/api/products', async (req,res) => {
+    const response = await productModel.find();
+    res.json(response);
+})
+
 
 
 
