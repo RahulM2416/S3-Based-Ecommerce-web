@@ -1,5 +1,3 @@
-# S3-Based-Ecommerce-web
-
 # 🛒 S3-Based E-Commerce Web Application
 
 A full-stack E-Commerce web application that integrates **AWS S3 Cloud Storage** for handling product image uploads using **pre-signed URLs**.
@@ -21,5 +19,52 @@ The main goal of this project is to implement:
 ✅ Cloud-based asset storage  
 
 ---
+
+## ⚙️ Tech Stack
+
+### Frontend
+- HTML
+- TAILWIND CSS
+- JavaScript
+- Fetch API 
+
+### Backend
+- Node.js
+- Express.js
+- REST APIs
+
+### Cloud & DevOps
+- Amazon S3
+- AWS IAM
+- Presigned URLs
+- Environment Variables (.env)
+
+---
+
+## ☁️ AWS S3 Integration (Core Feature)
+
+Instead of uploading images through the backend server:
+
+1. Backend generates a **Presigned URL**
+2. Frontend uploads image **directly to S3**
+3. Image stored securely in AWS bucket
+4. Backend never handles large file data
+
+### Benefits
+- 🔐 Secure uploads
+- ⚡ Faster performance
+- 💰 Reduced server load
+- ☁️ Scalable cloud storage
+---
+
+## 🛠️ Installation & Setup
+
+### 1️⃣ Clone Repository
+
+```bash
+git clone https://github.com/RahulM2416/S3-Based-Ecommerce-web.git
+cd S3-Based-Ecommerce-web
+```
+
 
 
