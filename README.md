@@ -100,4 +100,5 @@ npm run dev
 ---
 
 ## STAR THE REPO IF YOU LIKE THIS PROJECT
+![Made with Love](https://img.shields.io/badge/Made%20By-Rahul%20M-blueviolet)
 
